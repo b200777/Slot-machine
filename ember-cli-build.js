@@ -20,5 +20,11 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
+  app.import("node_modules/jquery-slotmachine/dist/slotmachine.min.css");
+  app.import("node_modules/jquery-slotmachine/dist/jquery.slotmachine.min.css");
+
+  app.import("node_modules/jquery-slotmachine/dist/slotmachine.js");
+  app.import("node_modules/jquery-slotmachine/dist/jquery.slotmachine.js");
+
   return app.toTree();
 };

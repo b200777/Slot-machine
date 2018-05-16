@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'slot-machine',
+    modulePrefix: 'project2',
     environment,
     rootURL: '/',
     locationType: 'auto',
@@ -20,6 +20,17 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    // Firebase
+    firebase: {
+      apiKey: "AIzaSyA0gbwFGdCtTI_VE379Uh4jrtcXfJGqkA8",
+      authDomain: "casino-cb01a.firebaseapp.com",
+      databaseURL: "https://casino-cb01a.firebaseio.com",
+      storageBucket: "casino-cb01a.appspot.com",
+    },
+    torii: {
+      sessionServiceName: 'session'
     }
   };
 

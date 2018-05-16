@@ -1,5 +1,81 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<div id="app" class="layout-column">
+  <div id="app-upper" class="flex layout-column">
+    <div id="app-header" class="flex-none layout-row layout-align-center">
+      <img class="flex-none" src="images/jQuery-SlotMachine/modified/machine-header-border-left.png" alt="">
+      <div id="app-header-main" class="flex-none">
+        <div id="nav-bar-container">
+          <div class="layout-row layout-align-space-around-end">
+            {{#if session.isAuthenticated}}
+            		{{#paper-button onClick=(action "signOut") raised=true mini=true iconButton=true}}
+                  {{paper-icon "power-off"}}
+                  {{#paper-tooltip position="bottom"}}
+                    Sign Out
+                  {{/paper-tooltip}}
+                {{/paper-button}}
+            {{else}}
+            		{{#paper-button onClick=(action "signIn" "google") raised=true mini=true iconButton=true}}
+                  {{paper-icon "power"}}
+                  {{#paper-tooltip position="bottom"}}
+                    Sign In
+                  {{/paper-tooltip}}
+                {{/paper-button}}
+            {{/if}}
+            {{#paper-button onClick=(action "toGame") raised=true mini=true iconButton=true}}
+              {{paper-icon "videogame-asset"}}
+              {{#paper-tooltip position="bottom"}}
+                Play Game
+              {{/paper-tooltip}}
+            {{/paper-button}}
+            {{#paper-button onClick=(action "toPlayerChart") raised=true mini=true iconButton=true}}
+              {{paper-icon "show-chart"}}
+              {{#paper-tooltip position="bottom"}}
+                Player Chart
+              {{/paper-tooltip}}
+            {{/paper-button}}
+          </div>
+        </div>
+      </div>
+      <img class="flex-none" src="images/jQuery-SlotMachine/modified/machine-header-border-right.png" alt="">
+    </div>
+    <div id="app-main-container" class="flex layout-row">
+      <div class="flex-none layout-column">
+        <img class="flex-none" src="images/jQuery-SlotMachine/modified/machine-main-border-top-left.png" alt="">
+        <div local-class="app-main-border" class="flex"> </div>
+      </div>
+      <div id="app-main-container-mid" class="flex">
+        <div id="app-main-wrapper">
+          <div id="app-main-shadow"></div>
+          <div id="app-main" style="overflow:scroll">
+            {{outlet}}
+          </div>
+        </div>
+      </div>
+      <div class="flex-none layout-column">
+        <img class="flex-none" src="images/jQuery-SlotMachine/modified/machine-main-border-top-right.png" alt="">
+        <div local-class="app-main-border" class="flex"> </div>
+      </div>
+    </div>
+  </div>
+  <div id="app-div" class="flex layout-row">
+    <img class="flex-none" src="images/jQuery-SlotMachine/modified/machine-div-left.png" alt="">
+    <img class="flex" src="images/jQuery-SlotMachine/modified/machine-div-center.png" alt="">
+    <img class="flex-none" src="images/jQuery-SlotMachine/modified/machine-div-right.png" alt="">
+  </div>
+  <div id="app-lower-container" class="flex layout-row">
+    <div id="app-lower" class="flex layout-column layout-align-center-center">
+      <div class="flex">
+        <p>A slot machine game created in CPSC 473</p>
+      </div>
+      <div class="flex">
+        <h2 id="team-members">Team Members</h2>
+      </div>
+      <div id="member-container" class="flex layout-row layout-wrap layout-align-space-around-center">
+        <div class="flex-33">Name Name</div>
+        <div class="flex-33">Name Name</div>
+        <div class="flex-33">Name Name</div>
+        <div class="flex-33">Name Name</div>
+        <div class="flex-33">Name Name</div>
+      </div>
+    </div>
+  </div>
+</div>

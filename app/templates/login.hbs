@@ -1,0 +1,15 @@
+<div local-class="page-container" class="layout-column layout-align-space-around-stretch flex">
+	<h3 local-class="page-title" class="flex-none">SLOT MACHINE</h3>
+
+	<div class="flex-none">
+		{{#if session.isAuthenticated}} {{#paper-button local-class="action-btn" noink=true primary=true onClick=(action "signOut")}}EXIT
+		GAME{{/paper-button}} {{else}} {{#paper-button local-class="action-btn" noink=true primary=true onClick=(action "signIn"
+		"google")}}START GAME{{/paper-button}} {{/if}}
+	</div>
+
+	<div class="flex-none layout-row layout-align-space-around-center">
+		{{base-slot id="machine1" pos=0}}
+		{{base-slot id="machine2" pos=1}}
+		{{base-slot id="machine3" pos=2}}
+	</div>
+</div>

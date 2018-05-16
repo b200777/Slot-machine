@@ -1,5 +1,20 @@
-# slot-machine
+# slot_machine
 
+## Using fire base authentication :shipit:
+
+#### info found from: https://github.com/firebase/emberfire
+
+
+#### Packages installed (Doing another npm install should automatically install these):
+```
+ember install emberfire //for firebase
+ember install torii //for authentication
+```
+
+#### Database link: https://console.firebase.google.com/u/3/project/casino-cb01a/settings/general/
+ - if you can't access it let me know your email <br />
+
+# Vanilla README stuff
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 
@@ -14,8 +29,8 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd slot-machine`
+* `git clone https://github.com/andrenaught/slot_machine.git` this repository
+* `cd slot_machine`
 * `npm install`
 
 ## Running / Development
@@ -54,3 +69,14 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+
+### Resources/References
+
+* [ember-paper](https://www.npmjs.com/package/ember-paper)
+* [ember-css-modules](https://www.npmjs.com/package/ember-css-modules)
+* [ember-css-modules-sass](https://github.com/dfreeman/ember-css-modules-sass)
+* [ember-browserify](https://www.npmjs.com/package/ember-browserify)
+* [box-sizing: border-box;](https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/)
+* [Normalize.css](https://necolas.github.io/normalize.css/)
+* [jQuery-SlotMachine](https://github.com/josex2r/jQuery-SlotMachine)
+* [Blinking text](https://stackoverflow.com/a/16344389)

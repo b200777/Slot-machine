@@ -1,0 +1,22 @@
+.page-container {
+  height: 100%;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 8.76vh;
+  color: #ee4e73;
+  margin-bottom: 0;
+}
+
+.action-btn {
+  color: #f09696 !important;
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  /* https://stackoverflow.com/a/16344389 */
+  50% {
+    opacity: 0;
+  }
+}

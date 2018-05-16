@@ -1,0 +1,61 @@
+<style>
+	table {
+		font-family: arial, sans-serif;
+		border-collapse: collapse;
+		width: 100%;
+	}
+	td,	th {
+		border: 1px solid #dddddd;
+		text-align: left;
+		padding: 8px;
+	}
+	tr:nth-child(even) {
+		background-color: #ee4e73;
+		opacity: 0.9;
+	}
+	table {
+		counter-reset: section;
+	}
+	.count:before {
+		counter-increment: section;
+		content: counter(section);
+	}
+
+</style>
+{{#if session.isAuthenticated}}
+	<div>{{session.currentUser.displayName}}<span id="email_session" style="display:none">{{session.currentUser.email}}</span><br>
+	</div>
+{{else}}
+	Not logged in<br>
+{{/if}}
+<center><h3>Player-Chart</h3></center>
+<section>
+	<table>
+		<tr>
+			<th>Ranking</th>
+			<th>User_email:</th>
+			<th>Score:</th>
+		</tr>
+		{{#each model as |stat|}}
+					<tr id="row_selector">
+					<td class="count"></td>
+					<td id="email">{{stat.email}}</td>
+					<td> {{stat.credit}}</td>
+	</tr>
+		{{/each}}
+	</table>
+
+</section>
+<script>
+	var a=document.querySelector("#row_selector");
+	var b=document.querySelector("#email_session");
+  var c=document.querySelectorAll("#email");
+c.forEach(function(element){
+	if(element.innerHTML==b.innerHTML)
+{
+ element.parentElement.setAttribute("style","border:solid black");
+}
+});
+
+
+	</script>
